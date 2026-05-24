@@ -38,6 +38,8 @@ class FlyweightTest {
         Tempero novo = fabrica.obterTempero("ALECRIM", "Alecrim", 1.50, "Erva fresca");
         int totalDepois = fabrica.getTotalTemperos();
         
+        assertNotNull(novo);
+        assertEquals("Alecrim", novo.getNome());
         assertTrue(totalDepois > totalAntes);
     }
 
